@@ -1,56 +1,37 @@
 import bg from "../assets/other_bg.jpg";
 import { Navbar } from "../components/Navbar";
+import erratumAI from "../assets/ErratumAIUI.png"
+import grader from "../assets/Grader.png"
 
 const bestProjects = [
   {
-    title: "Lusoteric: Esoteric Code Challenge Backend",
-    date: "May 2025 - August 2025",
-    tech: "TypeScript, Express.js, Prisma, Docker",
-    description:
-      "Backend for a multi-language code challenge platform with Docker sandbox execution, secure JWT auth, and dynamic challenge creation. Built to safely run user code with cleanup and strict resource limits.",
-    image: "",
-    deployLabel: "Live Deployment",
-    deployUrl: "",
-    repoLabel: "View on GitHub",
-    repoUrl: "https://github.com/Luisss003/Lusoteric"
-  },
-  {
-    title: "Luvies: Movie Discovery Platform",
-    date: "January 2025 - Present",
-    tech: "TypeScript, Express.js, Prisma, React, TMDB API",
-    description:
-      "Full-stack movie discovery app with 30+ endpoints and 1,000+ micro-genre orbs for precise recommendations. Includes a Prisma schema tuned for fast search across 500,000+ titles.",
-    image: "",
-    deployLabel: "Live Deployment",
-    deployUrl: "",
-    repoLabel: "View on GitHub",
-    repoUrl: "https://github.com/Luisss003/Luvies"
-  },
-  {
-    title: "Proxmox Homelab Environment",
-    date: "September 2024 - Present",
-    tech: "Proxmox VE, Docker, Linux, Kind",
-    description:
-      "Virtualized homelab with 6+ VMs and containerized services for databases and personal hosting. Used Kind clusters to rehearse production releases, debug APIs, and harden reliability.",
-    image: "",
-    deployLabel: "Live Deployment",
-    deployUrl: "",
-    repoLabel: "View on GitHub",
-    repoUrl: ""
-  }
-];
-
-const lowLevel = [
-  {
-    title: "YouTube Content Creation (Luis' Low Level)",
-    date: "January 2025 - Present",
-    description:
-      "Created educational content on reverse engineering and software development, reaching 1000+ viewers."
-  },
+  title: "ErratumAI: AI Textbook & Paper Correction SaaS",
+  date: "November 2025 - Present",
+  tech: "Java, Spring Boot, Spring AI, PostgreSQL, Redis, Docker, GCP",
+  description:
+    "Designed, built, and deployed an AI-powered SaaS that analyzes textbooks and academic papers to flag outdated or conflicting information. Uses an asynchronous processing pipeline with caching to support hundreds of uploads efficiently, reducing repeat analysis latency to milliseconds.",
+  image: erratumAI,
+  deployLabel: "Live Deployment",
+  deployUrl: "https://erratumai.luissaenz.me",
+  repoLabel: "Private Repository",
+  repoUrl: ""
+},
+{
+  title: "University of Texas at San Antonio: Software Engineering Grader",
+  date: "August 2025 - December 2025",
+  tech: "Java, Spring Boot, Django, Express.js",
+  description:
+    "Graded and reviewed 90+ student submissions weekly, evaluating backend architecture, design patterns, and correctness across multiple frameworks. Provided detailed feedback on API design, data modeling, and implementation quality.",
+  image: grader,
+  deployLabel: "",
+  deployUrl: "",
+  repoLabel: "",
+  repoUrl: ""
+}
 
 ];
 
-export default function ProjectsPage() {
+export default function CareerPage() {
   return (
     <div
       className="relative min-h-screen w-full overflow-hidden bg-black bg-cover bg-center text-amber-50"
@@ -59,16 +40,12 @@ export default function ProjectsPage() {
       <div className="pointer-events-none absolute inset-0 bg-black/60 backdrop-blur-sm" />
       <Navbar />
 
-      {/* This wrapper keeps your content centered and stops it from stretching edge-to-edge */}
       <main className="relative z-10 mx-auto max-w-6xl px-4 pt-24 pb-12">
         {/* Best Projects */}
         <header className="mb-8 space-y-2">
           <h1 className="text-3xl font-semibold text-amber-100 font-avant">
-           Software Engineering Projects
+           Professional Experience
           </h1>
-          <p className="max-w-2xl text-sm text-amber-100/70">
-            Backend, frontend, systems, and infra-heavy work.
-          </p>
         </header>
 
         <section className="flex flex-col gap-6">
@@ -88,7 +65,7 @@ export default function ProjectsPage() {
                     />
                   ) : (
                     <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-[#2b1912] text-amber-200/70">
-                      <span className="text-xs uppercase tracking-[0.3em]">No UI</span>
+                      <span className="text-xs uppercase tracking-[0.3em]">Preview</span>
                     </div>
                   )}
                 </div>
@@ -135,32 +112,9 @@ export default function ProjectsPage() {
           ))}
         </section>
 
-        {/* Low-Level / Reverse Engineering */}
-        <header className="mt-12 mb-6 space-y-2">
-          <h1 className="text-3xl font-semibold text-amber-100 font-avant">
-            Vulnerbility Research, Reverse Engineering, and Malware Analysis
-          </h1>
-          <p className="max-w-2xl text-sm text-amber-100/70">
-            Hobbyist work involved with low level security.
-          </p>
-        </header>
+        
 
-        <section className="grid gap-4 md:grid-cols-2">
-          {lowLevel.map((x) => (
-            <article
-              key={x.title}
-              className="rounded-xl border border-amber-200/20 bg-black/60 px-5 py-4"
-            >
-              <h3 className="text-lg font-semibold text-amber-100 font-avant">
-                {x.title}
-              </h3>
-              <p className="text-xs uppercase tracking-[0.24em] text-amber-200/70">
-                {x.date}
-              </p>
-              <p className="mt-3 text-sm text-amber-50/80">{x.description}</p>
-            </article>
-          ))}
-        </section>
+     
       </main>
     </div>
   );

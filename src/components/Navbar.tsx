@@ -6,11 +6,11 @@ function NavItem({ to, label }: { to: string; label: string }) {
       to={to}
       className={({ isActive }) =>
         [
-          "rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
-          "border border-slate-800/60",
+          "rounded-lg px-4 py-2 text-base font-semibold transition-colors",
+          "border border-amber-200/30",
           isActive
-            ? "bg-slate-900/60 text-slate-100"
-            : "bg-transparent text-slate-200 hover:bg-slate-900/40 hover:text-slate-100",
+            ? "bg-black/70 text-amber-100"
+            : "bg-transparent text-amber-200/80 hover:bg-black/60 hover:text-amber-50",
         ].join(" ")
       }
     >
@@ -21,15 +21,14 @@ function NavItem({ to, label }: { to: string; label: string }) {
 
 export function Navbar() {
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-      <div className="mx-auto flex h-14 items-center justify-between gap-6 px-4
-                      rounded-2xl border border-white/10
-                      bg-black/30 backdrop-blur-md shadow-lg">
+    <header className="fixed top-4 left-1/2 z-50 -translate-x-1/2">
+      <div className="mx-auto flex h-16 items-center justify-between gap-6 rounded-2xl border border-amber-200/30 bg-black/70 px-7 backdrop-blur-md shadow-lg">
 
-        <nav className="hidden sm:flex items-center gap-2">
-          <NavItem to="/about" label="About" />
+        <nav className="hidden items-center gap-3 sm:flex">
+          <NavItem to="/" label="Home" />
+          <NavItem to="/careers" label="Career" />
           <NavItem to="/projects" label="Projects" />
-          <NavItem to="/contact" label="Contact" />
+          <NavItem to="/about" label="About" />
         </nav>
       </div>
     </header>
