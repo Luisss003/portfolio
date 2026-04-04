@@ -26,9 +26,7 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-3 sm:flex">
           <NavItem to="/" label="Home" />
-          <NavItem to="/careers" label="Career" />
-          <NavItem to="/projects" label="Projects" />
-          <NavItem to="/about" label="About" />
+          <NavItem to="/research" label="Research" />
         </nav>
       </div>
     </header>
