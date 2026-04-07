@@ -40,15 +40,14 @@ export default function AcademicHome() {
             <section>
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Research Interests</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-amber-50/90">
-                <li>• Binary Analysis & Reverse Engineering</li>
-                <li>• Automated Exploit Generation (AEG)</li>
-                <li>• Trusted Execution Environments (TEEs)</li>
-                <li>• Machine Learning for Malware Classification</li>
-                <li>• Kernel Security & Hypervisors</li>
+                <li>Systems Security</li>
+                <li>Binary Analysis</li>
+                <li>Reverse Engineering</li>
+                <li>Machine Learning for Vulnerability Research</li>
+
               </ul>
             </section>
 
-            {/* Recent News (Crucial for PhD apps) */}
             <section>
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Recent News</h2>
               <ul className="space-y-4">
