@@ -36,7 +36,6 @@ export default function AcademicHome() {
               </p>
             </article>
 
-            {/* Research Interests (Adam Doupé Style) */}
             <section>
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Research Interests</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-amber-50/90">
@@ -70,9 +69,11 @@ export default function AcademicHome() {
               <div className="space-y-2 text-sm">
                 <p>luis.saenz.compsci@gmail.com</p>
                 <div className="pt-4 flex flex-col gap-2 font-semibold">
-                  <a href="#" className="hover:text-amber-200 transition">Curriculum Vitae (PDF)</a>
+                  <a href="../../public/LuisSaenzCV.pdf" className="hover:text-amber-200 transition">Curriculum Vitae (PDF)</a>
                   <a href="#" className="hover:text-amber-200 transition">Google Scholar</a>
-                  <a href="#" className="hover:text-amber-200 transition">YouTube Channel</a>
+                  <a href="https://www.youtube.com/@LuisSaenz-RevEng" className="hover:text-amber-200 transition" target="_blank" rel="noopener noreferrer">
+                    YouTube Channel
+                  </a>
                 </div>
               </div>
             </div>
