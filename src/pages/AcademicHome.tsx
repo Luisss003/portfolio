@@ -69,7 +69,7 @@ export default function AcademicHome() {
               <div className="space-y-2 text-sm">
                 <p>luis.saenz.compsci@gmail.com</p>
                 <div className="pt-4 flex flex-col gap-2 font-semibold">
-                  <a href="../../public/LuisSaenzCV.pdf" className="hover:text-amber-200 transition">Curriculum Vitae (PDF)</a>
+                  <a href="/LuisSaenzCV.pdf" className="hover:text-amber-200 transition">Curriculum Vitae (PDF)</a>
                   <a href="#" className="hover:text-amber-200 transition">Google Scholar</a>
                   <a href="https://www.youtube.com/@LuisSaenz-RevEng" className="hover:text-amber-200 transition" target="_blank" rel="noopener noreferrer">
                     YouTube Channel
