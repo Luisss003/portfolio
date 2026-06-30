@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .page-frame {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .page-frame__viewport {
+    position: relative;
+    width: min(100vw, calc(100vh * 4 / 3));
+    height: min(100vh, calc(100vw * 3 / 4));
+    width: min(100vw, calc(100dvh * 4 / 3));
+    height: min(100dvh, calc(100vw * 3 / 4));
+    aspect-ratio: 4 / 3;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #000;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .page-frame__viewport::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @layer base {
   @font-face {
     font-family: "ITC Avant Garde";

@@ -1,0 +1,74 @@
+[
+  {
+    "domain": "Systems Security",
+    "projects": [
+      {
+        "title": "LuRETools: Reverse Engineering Suite",
+        "description": "Developed a C-based utility suite for parsing Windows PE and Linux ELF headers. Implemented direct memory access routines to identify binary compatibility anomalies and embedded metadata without source code access.",
+        "tech": ["C", "Systems Programming", "ELF/PE Specifications", "Hex Analysis"],
+        "link": "https://github.com/Luisss003/LuRETools"
+      },
+      {
+        "title": "cage: Minimal Linux Sandbox and Syscall Monitor",
+        "description": "Built a Linux sandbox using namespaces, cgroups, seccomp-BPF, and ptrace to isolate processes and monitor syscall behavior. Implemented process containment with custom filesystem isolation and syscall filtering.",
+        "tech": ["C", "Linux", "ptrace", "seccomp-BPF", "Namespaces", "cgroups"],
+        "link": "https://github.com/Luisss003/cage"
+      }
+      
+    ]
+  },
+  
+  {
+    "domain": "Malware Analysis and Reverse Engineering",
+    "projects": [
+      {
+        "title": "WannaCry & EternalBlue: Kernel-Mode Exploit Chain Analysis",
+        "description": "Reverse engineered the EternalBlue SMB exploit (CVE-2017-0144). Analyzed kernel-mode buffer overflows, process hollowing techniques, and AES+RSA encryption procedures used for mutex-based persistence.",
+        "tech": ["Ghidra", "WinDbg", "x86 Assembly", "FlareVM", "Win32 API"],
+        "link": "https://github.com/Luisss003/WannaCry-Analysis"
+      }
+    ]
+  },
+  
+  {
+    "domain": "Network Security",
+    "projects": [
+      {
+        "title": "LL-Inj: Link-Layer Packet Replay & Injection Framework",
+        "description": "Built a low-latency packet injection tool using raw sockets. Focused on real-time header modification (MAC/IP/TCP SEQ) and checksum recalculation for synchronous replay attacks.",
+        "tech": ["C", "libpcap", "libdnet", "Raw Sockets", "Network Protocols"],
+        "link": "https://github.com/Luisss003/Link-Layer-Replay-Attack"
+      },
+      {
+        "title": "Pcap-Parser: Non-blocking Network Traffic Analysis",
+        "description": "Implemented a high-performance PCAP processor in C to analyze link-layer protocols and reconstruct network flows for forensic analysis.",
+        "tech": ["C", "libpcap", "Network Protocols", "Forensic Reconstruction"],
+        "link": "https://github.com/Luisss003/Pcap-Parser"
+      }
+    ]
+  },
+  
+  {
+    "domain": "Vulnerability Research and Exploit Development",
+    "projects": [
+      {
+        "title": "BufOvf: Automated Payload Generation for x86/x64",
+        "description": "Developed a toolset for automating the generation of buffer overflow payloads. Researched mitigation bypassing techniques including ROP-chain synthesis and stack canary exhaustion.",
+        "tech": ["C", "Python", "Assembly (x86/x64)", "ROP-Chain Synthesis", "Exploit Automation"],
+        "link": "https://github.com/Luisss003/BufOvf64-PayloadGen"
+      }
+    ]
+  },
+  
+  {
+    "domain": "Fuzzing",
+    "projects": [
+      {
+        "title": "AFL++ Fuzzing Campaigns",
+        "description": "Configured and ran AFL++ fuzzing campaigns against real-world C/C++ targets including tcpdump, xpdf, and minizip-ng. Practiced corpus minimization, sanitizer builds, crash reproduction, and triage workflows.",
+        "tech": ["C", "AFL++", "ASan", "UBSan", "GDB", "Crash Triage"],
+        "link": "#"
+      }
+    ]
+  }
+]

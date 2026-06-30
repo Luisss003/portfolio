@@ -21,12 +21,13 @@ function NavItem({ to, label }: { to: string; label: string }) {
 
 export function Navbar() {
   return (
-    <header className="fixed top-4 left-1/2 z-50 -translate-x-1/2">
-      <div className="mx-auto flex h-16 items-center justify-between gap-6 rounded-2xl border border-amber-200/30 bg-black/70 px-7 backdrop-blur-md shadow-lg">
+    <header className="sticky top-4 z-50 h-0 w-full pointer-events-none">
+      <div className="pointer-events-auto mx-auto flex h-16 w-fit items-center justify-between gap-6 rounded-2xl border border-amber-200/30 bg-black/70 px-7 backdrop-blur-md shadow-lg">
 
         <nav className="hidden items-center gap-3 sm:flex">
           <NavItem to="/" label="Home" />
           <NavItem to="/research" label="Research" />
+          <NavItem to="/blog" label="Blog" />
         </nav>
       </div>
     </header>

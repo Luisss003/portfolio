@@ -1,10 +1,79 @@
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import bg from "../assets/other_bg.jpg"; // Import the background image
+import { blogPosts } from "../content/blog/blogPosts";
+
+type NewsItem = {
+  date: string;
+  title: string;
+  href?: string;
+  to?: string;
+};
+
+function formatNewsDate(date: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+    .format(new Date(date))
+    .toUpperCase();
+}
 
 export default function AcademicHome() {
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+  const blogNewsItems = useMemo<NewsItem[]>(
+    () =>
+      blogPosts
+        .filter((post) => post.showInNews)
+        .map((post) => ({
+          date: post.date,
+          title: post.newsTitle ?? `Published "${post.title}"`,
+          to: `/blog/${post.slug}`,
+        })),
+    [],
+  );
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch(`${import.meta.env.BASE_URL}news.json`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Unable to load recent news.");
+        }
+
+        return response.json() as Promise<NewsItem[]>;
+      })
+      .then((items) => {
+        if (isMounted) {
+          setNewsItems(items);
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setNewsItems([]);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const recentNews = useMemo(
+    () =>
+      [...newsItems]
+        .concat(blogNewsItems)
+        .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+        .slice(0, 3),
+    [blogNewsItems, newsItems],
+  );
+
   return (
     // Outer wrapper handles the background image and overall layout
     <div 
-      className="relative min-h-screen w-full bg-black bg-cover bg-center"
+      className="relative min-h-full w-full bg-black bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* Overlay provides the darkness (bg-black/70) and the blur effect */}
@@ -38,11 +107,11 @@ export default function AcademicHome() {
 
             <section>
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Research Interests</h2>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-amber-50/90">
+              <ul className="grid list-disc list-inside grid-cols-1 gap-2 text-amber-50/90 md:grid-cols-2">
                 <li>Systems Security</li>
                 <li>Binary Analysis</li>
                 <li>Reverse Engineering</li>
-                <li>Machine Learning for Vulnerability Research</li>
+                <li>Fuzzing</li>
 
               </ul>
             </section>
@@ -50,14 +119,22 @@ export default function AcademicHome() {
             <section>
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Recent News</h2>
               <ul className="space-y-4">
-               <li className="flex gap-4">
-                  <span className="text-amber-200/60 font-mono">MAR 2026</span>
-                  <span>Released a deep-dive series on Monte Carlo Tree Search for adversarial AI.</span>
-                </li>
-                <li className="flex gap-4">
-                  <span className="text-amber-200/60 font-mono">MAY 2025</span>
-                  <span>Graduated Summa Cum Laude with B.S. in Computer Science (3.98 GPA).</span>
-                </li>
+                {recentNews.map((item) => (
+                  <li className="flex gap-4" key={`${item.date}-${item.title}`}>
+                    <span className="w-20 shrink-0 text-amber-200/60 font-mono">{formatNewsDate(item.date)}</span>
+                    {item.to ? (
+                      <Link className="text-amber-50/90 underline decoration-amber-200/40 underline-offset-4 transition hover:text-amber-200" to={item.to}>
+                        {item.title}
+                      </Link>
+                    ) : item.href ? (
+                      <a href={item.href} className="text-amber-50/90 underline decoration-amber-200/40 underline-offset-4 transition hover:text-amber-200">
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span>{item.title}</span>
+                    )}
+                  </li>
+                ))}
               </ul>
             </section>
           </section>
