@@ -94,14 +94,9 @@ export default function AcademicHome() {
 
             <article className="prose prose-invert max-w-none">
               <p className="text-lg leading-relaxed">
-                I am a Graduate Research Assistant at the <strong>University of Texas at San Antonio (UTSA)</strong>. 
-                My research focuses on <strong>automated vulnerability analysis</strong>, <strong>binary analysis</strong>, 
-                and the security of low-level systems.
-              </p>
-              <p className="text-lg leading-relaxed mt-4">
-                I run the YouTube channel <a href="https://www.youtube.com/@LuisSaenz-RevEng" className="text-amber-200 underline">Luis' Low Level</a>, 
-                where I produce educational content on reverse engineering and software exploitation, 
-                bridging the gap between academic theory and practical "hacking."
+                I am a Master's student in Computer Science at the University of Texas at San Antonio (UTSA). My interests lie in understanding software and computer systems at a low level: how they are built, how they fail, and how those failures can be analyzed, exploited, and secured.
+                <br /><br />
+                As modern computing moves toward abstracted frameworks and managed platforms, I believe low-level systems knowledge is becoming increasingly rare. Through my research, projects, and YouTube channel, Luis' Low Level, I connect academic systems concepts with practical reverse engineering and software exploitation.
               </p>
             </article>
 
@@ -109,9 +104,10 @@ export default function AcademicHome() {
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Research Interests</h2>
               <ul className="grid list-disc list-inside grid-cols-1 gap-2 text-amber-50/90 md:grid-cols-2">
                 <li>Systems Security</li>
-                <li>Binary Analysis</li>
+                <li>Binary Program Analysis</li>
                 <li>Reverse Engineering</li>
-                <li>Fuzzing</li>
+                <li>Coverage-Guided Fuzzing</li>
+                <li>Exploitability Analysis</li>
 
               </ul>
             </section>
