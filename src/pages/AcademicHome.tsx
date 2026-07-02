@@ -96,7 +96,7 @@ export default function AcademicHome() {
               <p className="text-lg leading-relaxed">
                 I am a Master's student in Computer Science at the University of Texas at San Antonio (UTSA). My interests lie in understanding software and computer systems at a low level: how they are built, how they fail, and how those failures can be analyzed, exploited, and secured.
                 <br /><br />
-                As modern computing moves toward abstracted frameworks and managed platforms, I believe low-level systems knowledge is becoming increasingly rare. Through my research, projects, and YouTube channel, Luis' Low Level, I connect academic systems concepts with practical reverse engineering and software exploitation.
+                Given everything in computing is becoming more and more abstracted, so I believe low-level systems knowledge is becoming increasingly rare. Through my research, projects, and YouTube channel, Luis' Low Level, I aim to connect academic systems concepts with practical system hardening and software exploitation.
               </p>
             </article>
 
