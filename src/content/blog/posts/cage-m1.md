@@ -1,5 +1,6 @@
 --- 
-title: "Creating a Security Oriented Docker Pt.1" date: "2026-07-06" 
+title: "Creating a Security Oriented Docker Pt.1" 
+date: "2026-07-06" 
 summary: "The first part in series documenting the creation of cage, my custom Linux sandbox." 
 tags: ["System Security", "Containerization", "Malware Analysis", "Binary Analysis"] 
 newsTitle: "Published a new writeup on cage." 
