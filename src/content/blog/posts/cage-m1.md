@@ -1,4 +1,4 @@
---- 
+---
 title: "Creating a Security Oriented Docker Pt.1" 
 date: "2026-07-06" 
 summary: "The first part in series documenting the creation of cage, my custom Linux sandbox." 
@@ -6,7 +6,7 @@ tags: ["System Security", "Containerization", "Malware Analysis", "Binary Analys
 newsTitle: "Published a new writeup on cage." 
 showInNews: true 
 draft: false
---- 
+---
 # cage: Creating a Security Oriented Docker Pt.1 
 ## Background and Reasoning
 Docker is not inherently dangerous, or insecure; it was simply not meant for security. It heavily relies on the concept of Linux namespaces, which to briefly explain, is a just a way to isolate a common resource between groups/namespaces. For anyone who has done any kind of binary/malware analysis, this is a clear red flag; you wouldn't want an unknown binary to have access to host resources. Even the smallest misconfiguration, or error on Dockers part, allows the process to escape containerization. 

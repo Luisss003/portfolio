@@ -47,7 +47,7 @@ function parseValue(value: string) {
 }
 
 function parseFrontmatter(markdown: string) {
-  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+  const match = markdown.match(/^---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/);
 
   if (!match) {
     return {
