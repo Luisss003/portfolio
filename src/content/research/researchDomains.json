@@ -1,6 +1,23 @@
 [
   {
-    "domain": "Systems Security",
+    "domain": "Academic Research",
+    "projects": [
+      {
+        "title": "Master's Thesis: Dynamic Heap-State Analysis for Use-After-Free Exploitability",
+        "description": "Developing a low perturbation, glibc aware runtime analysis framework for Linux x86-64 programs that reconstructs heap allocation generations and same address reuse, associates stale accesses with reclaimed objects, tracks attacker derived data in replacement allocations, and classifies the observed consequences of use-after-free executions.",
+        "tech": ["Linux glibc allocator internals", "C", "LLVM", "heap exploitation", "research"],
+        "link": "https://github.com/Luisss003/uaf-reclemation-analysis-thesis"
+      },
+      {
+        "title": "Graduate Research Assistant: UTSA H-E-B Community Innovation Scholars",
+        "description": "Developed technical activities and provided implementation guidance for seven undergraduate teams working with nonprofit partners, including Goodwill and United Way. Supported symposium reports and posters, receiving formal acknowledgment for project and whitepaper contributions.",
+        "tech": ["python", "ArcGIS", "data analysis", "research"],
+        "link": "https://news.utsa.edu/2026/07/data-with-purpose-h-e-b-community-innovation-scholars-help-nonprofits-solve-pressing-community-challenges/?utm_source=chatgpt.com"
+      }
+    ]
+  },
+  {
+    "domain": "Systems Security Projects",
     "projects": [
       {
         "title": "LuRETools: Reverse Engineering Suite",
@@ -17,7 +34,17 @@
       
     ]
   },
-  
+    {
+    "domain": "Vulnerability Research and Exploit Development",
+    "projects": [
+      {
+        "title": "BufOvf: Automated Payload Generation for x86/x64",
+        "description": "Developed a toolset for automating the generation of buffer overflow payloads. Researched mitigation bypassing techniques including ROP-chain synthesis and stack canary exhaustion.",
+        "tech": ["C", "Python", "Assembly (x86/x64)", "ROP-Chain Synthesis", "Exploit Automation"],
+        "link": "https://github.com/Luisss003/BufOvf64-PayloadGen"
+      }
+    ]
+  },
   {
     "domain": "Malware Analysis and Reverse Engineering",
     "projects": [
@@ -44,30 +71,6 @@
         "description": "Implemented a high-performance PCAP processor in C to analyze link-layer protocols and reconstruct network flows for forensic analysis.",
         "tech": ["C", "libpcap", "Network Protocols", "Forensic Reconstruction"],
         "link": "https://github.com/Luisss003/Pcap-Parser"
-      }
-    ]
-  },
-  
-  {
-    "domain": "Vulnerability Research and Exploit Development",
-    "projects": [
-      {
-        "title": "BufOvf: Automated Payload Generation for x86/x64",
-        "description": "Developed a toolset for automating the generation of buffer overflow payloads. Researched mitigation bypassing techniques including ROP-chain synthesis and stack canary exhaustion.",
-        "tech": ["C", "Python", "Assembly (x86/x64)", "ROP-Chain Synthesis", "Exploit Automation"],
-        "link": "https://github.com/Luisss003/BufOvf64-PayloadGen"
-      }
-    ]
-  },
-  
-  {
-    "domain": "Fuzzing",
-    "projects": [
-      {
-        "title": "AFL++ Fuzzing Campaigns",
-        "description": "Configured and ran AFL++ fuzzing campaigns against real-world C/C++ targets including tcpdump, xpdf, and minizip-ng. Practiced corpus minimization, sanitizer builds, crash reproduction, and triage workflows.",
-        "tech": ["C", "AFL++", "ASan", "UBSan", "GDB", "Crash Triage"],
-        "link": "#"
       }
     ]
   }

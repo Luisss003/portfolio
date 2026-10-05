@@ -96,7 +96,7 @@ export default function AcademicHome() {
               <p className="text-lg leading-relaxed">
                 I am a Master's student in Computer Science at the University of Texas at San Antonio (UTSA). My interests lie in understanding software and computer systems at a low level: how they are built, how they fail, and how those failures can be analyzed, exploited, and secured.
                 <br /><br />
-                Given everything in computing is becoming more and more abstracted, so I believe low-level systems knowledge is becoming increasingly rare. Through my research, projects, and YouTube channel, Luis' Low Level, I aim to connect academic systems concepts with practical system hardening and software exploitation.
+                Given everything in computing is becoming more and more abstracted, I believe low-level systems knowledge is becoming increasingly rare. Through my research, projects, and YouTube channel, Luis' Low Level, I aim to connect academic systems concepts with practical system hardening and software exploitation.
               </p>
             </article>
 
@@ -104,10 +104,9 @@ export default function AcademicHome() {
               <h2 className="text-2xl font-semibold border-b border-amber-200/20 pb-2 mb-4 font-avant">Research Interests</h2>
               <ul className="grid list-disc list-inside grid-cols-1 gap-2 text-amber-50/90 md:grid-cols-2">
                 <li>Systems Security</li>
-                <li>Binary Program Analysis</li>
-                <li>Reverse Engineering</li>
-                <li>Coverage-Guided Fuzzing</li>
-                <li>Exploitability Analysis</li>
+                <li>Memory Corruption and Mitigation</li>
+                <li>Software Exploitation</li>
+                <li>Program Analysis</li>
 
               </ul>
             </section>
@@ -138,12 +137,12 @@ export default function AcademicHome() {
           {/* Right Column: Contact/Links (Sidebar Style) */}
           <aside className="space-y-8">
             <div className="rounded-xl border border-amber-200/10 bg-[#140607] p-6">
-              <h3 className="text-sm uppercase tracking-widest text-amber-200/50 mb-4">Contact</h3>
+              <h3 className="text-sm uppercase tracking-widest text-amber-200/50 mb-4"><b>Contact</b></h3>
               <div className="space-y-2 text-sm">
-                <p>luis.saenz.compsci@gmail.com</p>
+                <p><b>Personal:</b> luis.saenz.compsci@gmail.com</p>
+                <p><b>University:</b> luis.saenz@my.utsa.edu</p>
                 <div className="pt-4 flex flex-col gap-2 font-semibold">
                   <a href="/LuisSaenzCV.pdf" className="hover:text-amber-200 transition">Curriculum Vitae (PDF)</a>
-                  <a href="#" className="hover:text-amber-200 transition">Google Scholar</a>
                   <a href="https://www.youtube.com/@LuisSaenz-RevEng" className="hover:text-amber-200 transition" target="_blank" rel="noopener noreferrer">
                     YouTube Channel
                   </a>
