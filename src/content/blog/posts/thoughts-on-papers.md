@@ -5,7 +5,7 @@ summary: "Giving my thoughts on papers I read during my thesis literature review
 tags: ["Systems Security", "Dynamic Memory Safety and Corruption", "Research"]
 newsTitle: "My thoughts on existing research"
 showInNews: true
-draft: true
+draft: false
 ---
 
 # My Thoughts on Existing Research
